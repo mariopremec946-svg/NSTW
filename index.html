@@ -1,36 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="dist/output.css">
-</head>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
 
-<body class="bg-slate-500 p-8">
+  <body
+    class="bg-slate-500 text-slate-900 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <header
+      class="flex items-center justify-between p-4 bg-white shadow-sm dark:bg-slate-800"
+    >
+      <a href="#" class="focus-ring rounded-sm text-xl font-bold text-brand"
+        >Radionice</a
+      >
+      <nav class="flex gap-4">
+        <a href="#katalog" class="focus-ring rounded-sm hover:text-brand"
+          >Katalog</a
+        >
+        <a href="#kontakt" class="focus-ring rounded-sm hover:text-brand"
+          >Kontakt</a
+        >
+      </nav>
+    </header>
 
-    <h1 class="mb-6 text-center text-2xl font-bold md:text-4xl lg:text-5xl">
-        Katalog radionica
-    </h1>
+    <main class="grid lg:grid-cols-4 gap-6 max-w-6xl mx-auto p-6">
+      <section id="katalog" class="lg:col-span-3">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">
+          Katalog radionica
+        </h1>
 
-    <article class="bg-white p-6 max-w-sm mx-auto rounded-lg shadow-sm">
-        <span class="px-2 py-1 text-xs font-semibold uppercase tracking-wide 
-            bg-yellow-100 text-yellow-800 border border-yellow-300 rounded-sm" >
-            Novo
-        </span>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <button class="px-4 px-1 border rounded-full">Sve</button>
+          <button class="px-4 px-1 border rounded-full">Programiranje</button>
+          <button class="px-4 px-1 border rounded-full">Dizaj</button>
+          <button class="px-4 px-1 border rounded-full">Elektronika</button>
+        </div>
 
-        <h2 class="mt-4 text-lg font-bold ">Pyhton za početnike</h2>
-        <p class="mt-2 text-sm text-slate-600 leading-relaxed ">Varijable, petlje i prvi mali program</p>
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
 
-        <ul class="mt-4 space-y-2 text-sm text-slate-600">
-            <li>subota, 10:00</li>
-            <li>učionica 12</li>
-        </ul>
+          <article class="card @container group flex flex-col">
+            
+            <h2 class="text-lg font-bold group-hover:text-brand">Pyhton za početnike</h2>
+            <p class="flex-1 mt-2 text-sm text-slate-600 leading-relaxed dark:text-slate-400">
+              Varijable, petlje i prvi mali program
+            </p>
 
-        <a href="#" class="block mt-6 px-4 py-2 bg-blue-600 text-white text-center rounded-sm
-            hover:bg-blue-700">Prijavi</a>
-    </article>
-    
-</body>
+            <div class="flex flex-col gap-4 mt-4 @sm:flex.row @sm:items-end @sm:justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li>subota, 10:00</li>
+              <li>učionica 12</li>
+            </ul>
 
+            <a href="#" class="btn-primary">
+                Prijavi se
+            </a>
+            </div>
+        
+          </article>
+
+          <article class="card @container group flex flex-col">
+            
+            <h2 class="text-lg font-bold group-hover:text-brand">Web dizajn</h2>
+            <p class="flex-1 mt-2 text-sm text-slate-600 leading-relaxed dark:text-slate-400">
+              Varijable, petlje i prvi mali program
+            </p>
+
+            <div class="flex flex-col gap-4 mt-4 @sm:flex.row @sm:items-end @sm:justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li>subota, 10:00</li>
+              <li>učionica 12</li>
+            </ul>
+
+            <a href="#" class="btn-primary">
+                Prijavi se
+            </a>
+            </div>
+        
+          </article>
+
+          <article class="card @container group flex flex-col">
+            
+            <h2 class="text-lg font-bold group-hover:text-brand">Arduino</h2>
+            <p class="flex-1 mt-2 text-sm text-slate-600 leading-relaxed dark:text-slate-400">
+              Varijable, petlje i prvi mali program
+            </p>
+
+            <div class="flex flex-col gap-4 mt-4 @sm:flex.row @sm:items-end @sm:justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li>subota, 10:00</li>
+              <li>učionica 12</li>
+            </ul>
+
+            <a href="#" class="btn-primary">
+                Prijavi se
+            </a>
+            </div>
+        
+          </article>
+
+        </div>
+      </section>
+
+      <aside class="p-6 bg-white rounded-card shadow-sm dark:bg-slate-600">
+        <h2 class="font-bold">Kako do prijave</h2>
+
+        <ol class="mt-4 space-y-2 list-decimal list-inside text-slate-600 dark:text-slate-400">
+            <li>Odaberi radionicu</li>
+            <li>klikni "Prijavi se"</li>
+            <li>Potvrdi e-mail</li>
+
+
+        </ol>
+      </aside>
+    </main>
+
+    <footer
+      id="kontakt"
+      class="p-6 bg-white rounded-card shadow-sm dark:bg-slate-800"
+    >
+      radionice@example.com &copy; 2026 Radionice
+    </footer>
+
+  </body>
 </html>
